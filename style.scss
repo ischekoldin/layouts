@@ -20,10 +20,10 @@ body {
 
 .container {
   height: calc(100vh - 20rem);
-  width: calc(100vw - 20rem);
+  width: calc(100vw - 30rem);
   display: flex;
   flex-wrap: wrap;
-  padding: 10rem;
+  padding: 10rem 15rem;
 }
 
 h1 {
@@ -39,6 +39,7 @@ section {
   display: grid;
   grid-template-areas: "title stars stars stars stars stars"
                         "reviews reviews reviews reviews reviews reviews";
+  grid-template-columns: 1fr 2fr;
 }
 
 
@@ -57,17 +58,17 @@ section {
 
 
 .star-rating__first {
-  grid-column: 4 / 10;
+  grid-column: 2 / 10;
   grid-row: 1;
 }
 
 .star-rating__second {
-  grid-column: 5 / 11;
+  grid-column: 3 / 11;
   grid-row: 2;
 }
 
 .star-rating__third {
-  grid-column: 6 / 12;
+  grid-column: 4 / 12;
   grid-row: 3;
 }
 
@@ -94,22 +95,23 @@ section {
 
 
 .review {
+  padding-left: 0;
   grid-area: reviews;
   display: grid;
-  place-content: space-between;
-  grid-template-columns: repeat(auto-fit, 1fr);
+  place-content: space-around;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(12, 1fr);
 }
 
-.review > * {
-  padding: 1rem;
+.review >* {
+  padding: 1.5rem;
   width: 20rem;
 }
 
 .review__card {
   display: grid;
-  grid-template-areas: "pic name name name ."
-                        "pic stat stat stat ."
+  grid-template-areas: "pic pic name name name"
+                        "pic pic stat stat stat"
                         "review review review review review";
   background-color: $primary-dark;
   color: $neutral-light;
@@ -117,8 +119,10 @@ section {
 }
 
 .card__picture {
+  border-radius: 45px;
   width: 70%;
   height: auto;
+  grid-area: pic;
 }
 
 .card__name {
