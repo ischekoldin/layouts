@@ -1,0 +1,136 @@
+@charset "UTF-8";
+html {
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  background: url(./images/bg-pattern-bottom-desktop.svg);
+  background-size: cover;
+  font-family: "Spartan", sans-serif;
+}
+
+.container {
+  height: calc(100vh - 20rem);
+  width: calc(100vw - 20rem);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10rem;
+}
+
+h1 {
+  font-size: 2.9rem;
+  color: #502050;
+}
+
+ul {
+  list-style-type: none;
+}
+
+section {
+  display: grid;
+  grid-template-areas: "title stars stars stars stars stars" "reviews reviews reviews reviews reviews reviews";
+}
+
+.title {
+  grid-area: title;
+}
+
+.star-rating {
+  place-content: center;
+  grid-area: stars;
+  display: grid;
+  grid-row-gap: 1.3rem;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 3.5rem);
+}
+
+.star-rating__first {
+  grid-column: 4/10;
+  grid-row: 1;
+}
+
+.star-rating__second {
+  grid-column: 5/11;
+  grid-row: 2;
+}
+
+.star-rating__third {
+  grid-column: 6/12;
+  grid-row: 3;
+}
+
+.star-rating__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background-color: #f7f2f7;
+  color: #502050;
+  border-radius: 10px;
+}
+
+.star-rating__card:before {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #d1ab00;
+  content: "★ ★ ★ ★ ★";
+  margin-right: 1.7rem;
+}
+
+.review {
+  grid-area: reviews;
+  display: grid;
+  place-content: space-between;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.review > * {
+  padding: 1rem;
+  width: 20rem;
+}
+
+.review__card {
+  display: grid;
+  grid-template-areas: "pic name name name ." "pic stat stat stat ." "review review review review review";
+  background-color: #502050;
+  color: #f7f2f7;
+  border-radius: 10px;
+}
+
+.card__picture {
+  width: 70%;
+  height: auto;
+}
+
+.card__name {
+  margin-bottom: 0.1rem;
+  grid-area: name;
+}
+
+.card__status {
+  margin-top: 0.1rem;
+  color: #ee68a4;
+  grid-area: stat;
+}
+
+.card__review {
+  grid-area: review;
+}
+
+.review__first {
+  grid-row: 2/span 8;
+}
+
+.review__second {
+  grid-row: 3/span 8;
+}
+
+.review__third {
+  grid-row: 4/span 8;
+}
+
+/*# sourceMappingURL=style.css.map */
