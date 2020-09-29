@@ -151,6 +151,12 @@ section {
 }
 
 @media screen and (max-width: 1440px) {
+  body {
+    background: url(./images/bg-pattern-bottom-mobile.svg);
+    background-size: cover;
+    overflow-y: auto;
+  }
+
   section {
     grid-row-gap: 3rem;
     grid-template-areas: "title" "stars" "reviews";
