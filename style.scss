@@ -175,7 +175,7 @@ section {
 
 
 
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1300px){
   body {
     background: url(./images/bg-pattern-bottom-mobile.svg);
     background-size: cover;
@@ -237,6 +237,11 @@ section {
     place-content: center;
     grid-template-rows: repeat(3, 1fr);
   }
+
+  .section__review:last-child {
+    margin-bottom: 3.1rem;
+  }
+
 
   .review__card_first {
     grid-row: 1;

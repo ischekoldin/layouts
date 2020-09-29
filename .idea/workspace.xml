@@ -64,7 +64,7 @@
       <workItem from="1601322490423" duration="245000" />
       <workItem from="1601331580132" duration="2473000" />
       <workItem from="1601368000549" duration="13200000" />
-      <workItem from="1601398219065" duration="2619000" />
+      <workItem from="1601398219065" duration="3453000" />
     </task>
     <task id="LOCAL-00001" summary="improved mobile layout">
       <created>1601398560534</created>
@@ -80,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601401120191</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixed width">
+      <created>1601401798610</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601401798610</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +108,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="improved mobile layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved mobile layout" />
+    <MESSAGE value="fixed width" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed width" />
   </component>
 </project>
