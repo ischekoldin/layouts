@@ -19,16 +19,16 @@ body {
 }
 
 .container {
-  height: calc(100vh - 20rem);
-  width: calc(100vw - 30rem);
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10rem 15rem;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
 }
 
 h1 {
   font-size: 2.9rem;
   color: $primary-dark;
+  margin-bottom: 1rem;
 }
 
 ul {
@@ -36,41 +36,30 @@ ul {
 }
 
 section {
+  place-content: space-between;
   display: grid;
+  grid-row-gap: 3rem;
   grid-template-areas: "title stars stars stars stars stars"
                         "reviews reviews reviews reviews reviews reviews";
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 30rem minmax(auto, 1fr);
 }
 
 
-.title {
+.section__title {
+  color: $neutral-dark;
   grid-area: title;
 }
 
-.star-rating {
+.section__star-rating {
+  margin-left: auto;
   place-content: center;
   grid-area: stars;
   display: grid;
-  grid-row-gap: 1.3rem;
+  grid-row-gap: 1.1rem;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(3, 3.5rem);
+  grid-template-rows: repeat(3, 3.7rem);
 }
 
-
-.star-rating__first {
-  grid-column: 2 / 10;
-  grid-row: 1;
-}
-
-.star-rating__second {
-  grid-column: 3 / 11;
-  grid-row: 2;
-}
-
-.star-rating__third {
-  grid-column: 4 / 12;
-  grid-row: 3;
-}
 
 .star-rating__card {
   display: flex;
@@ -79,31 +68,49 @@ section {
   font-weight: bold;
   background-color: $neutral-light;
   color: $primary-dark;
+  width: fit-content;
+  padding-left: 2rem;
+  padding-right: 2rem;
   border-radius: 10px;
 }
 
 .star-rating__card:before {
   text-align: center;
   font-size: 1.5rem;
-  color: #d1ab00;
+  color: #ef9549;
   content: "★ ★ ★ ★ ★";
   margin-right: 1.7rem;
 }
 
+.star-rating__card_first {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+.star-rating__card_second {
+  grid-column: 2 / -1;
+  grid-row: 2;
+}
+
+.star-rating__card_third {
+  grid-column: 3 / -1;
+  grid-row: 3;
+}
 
 
 
 
-.review {
+.section__review {
   padding-left: 0;
   grid-area: reviews;
   display: grid;
-  place-content: space-around;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(12, 1fr);
+  grid-column-gap: 1rem;
+  place-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  grid-template-rows: repeat(16, 1fr);
 }
 
-.review >* {
+.section__review >* {
   padding: 1.5rem;
   width: 20rem;
 }
@@ -116,48 +123,119 @@ section {
   background-color: $primary-dark;
   color: $neutral-light;
   border-radius: 10px;
+  padding: 2rem;
+}
+
+.review__card_first {
+  grid-row: 1/ 13;
+}
+
+.review__card_second {
+
+  grid-row: 2/ 14;
+}
+
+.review__card_third {
+
+  grid-row: 3/ 15;
 }
 
 .card__picture {
   border-radius: 45px;
-  width: 70%;
-  height: auto;
+  width: 40%;
+  margin: auto 0;
   grid-area: pic;
 }
 
 .card__name {
-  margin-bottom: 0.1rem;
+  margin-left: -2.7rem;
+  margin-bottom: 0;
   grid-area: name;
 }
 
 .card__status {
+  margin-left: -2.7rem;
   margin-top: 0.1rem;
   color: $primary-light;
   grid-area: stat;
 }
 
 .card__review {
+  margin-top: 1.4rem;
   grid-area: review;
 }
 
-.review__first {
-  grid-row: 2/ span 8;
-}
 
-.review__second {
-
-  grid-row: 3/ span 8;
-}
-
-.review__third {
-
-  grid-row: 4/ span 8;
-}
 
 @media screen and (min-width: 1440px){
 
 }
 
 @media screen and (max-width: 1440px){
+  section {
+    grid-row-gap: 3rem;
+    grid-template-areas: "title"
+                          "stars"
+                          "reviews";
+  }
 
+  ul {
+    padding-inline-start: 0;
+  }
+
+  .section__star-rating {
+    margin: 0;
+    place-content: center;
+    grid-area: stars;
+    display: grid;
+    grid-row-gap: 1.1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 3.7rem);
+  }
+
+  .star-rating__card {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-self: center;
+  }
+
+  .star-rating__card_first {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .star-rating__card_second {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .star-rating__card_third {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .section__review {
+    margin: 0 auto;
+    padding-left: 0;
+    grid-area: reviews;
+    display: grid;
+    grid-row-gap: 1rem;
+    grid-column-gap: 0;
+    place-content: center;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .review__card_first {
+    grid-row: 1;
+  }
+
+  .review__card_second {
+    grid-row: 2;
+  }
+
+  .review__card_third {
+    grid-row: 3;
+  }
 }
