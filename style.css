@@ -4,6 +4,7 @@ html {
 }
 
 body {
+  overflow: hidden;
   margin: 0;
   padding: 0;
   font-size: 15px;
@@ -61,7 +62,7 @@ section {
   color: #502050;
   width: fit-content;
   padding-left: 2rem;
-  padding-right: 2rem;
+  padding-right: 1.8rem;
   border-radius: 10px;
 }
 
@@ -153,6 +154,7 @@ section {
   section {
     grid-row-gap: 3rem;
     grid-template-areas: "title" "stars" "reviews";
+    grid-template-columns: 25rem;
   }
 
   ul {
