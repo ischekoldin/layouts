@@ -5,6 +5,12 @@ $neutral-dark: hsl(303, 10%, 53%);
 $neutral-light: hsl(300, 24%, 96%);
 $white: hsl(0, 0%, 100%);
 
+
+* {
+  box-sizing: border-box;
+}
+
+
 html {
   font-family: 'Spartan', sans-serif;
 }
@@ -113,7 +119,7 @@ section {
 
 .section__review >* {
   padding: 1.5rem;
-  width: 20rem;
+  width: 25rem;
 }
 
 .review__card {

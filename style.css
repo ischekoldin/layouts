@@ -1,4 +1,8 @@
 @charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Spartan", sans-serif;
 }
@@ -101,7 +105,7 @@ section {
 
 .section__review > * {
   padding: 1.5rem;
-  width: 20rem;
+  width: 25rem;
 }
 
 .review__card {
