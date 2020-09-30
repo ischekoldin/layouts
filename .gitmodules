@@ -1,0 +1,4 @@
+[submodule "social-media-dashboard-with-theme-switcher-master\\"]
+	path = social-media-dashboard-with-theme-switcher-master\\
+	url = ./social-media-dashboard-with-theme-switcher-master\\
+	branch = master
